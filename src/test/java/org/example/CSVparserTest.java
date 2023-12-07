@@ -15,27 +15,27 @@ import static org.junit.Assert.*;
 public class CSVparserTest {
     @Test
     public void isCorrectFilePathTestTrue() {
-        String filePath = "C:/Users/Sofi/Desktop/foreign_names_1.csv";
+        String filePath = "C:/Users/Evgenya/Desktop/foreign_names_1.csv";
         CVSparser reader = new CVSparser();
         assertTrue(reader.isCorrectFilePath(filePath));
     }
 
     @Test
     public void isCorrectFilePathTestFalse() {
-        String filePath = "C:/Users/Sofi/Desktop/foreign_names_1.cs";
+        String filePath = "C:/Users/Evgenya/Desktop/foreign_names_1.cs";
         CVSparser reader = new CVSparser();
         assertFalse(reader.isCorrectFilePath(filePath));
     }
 
     @Test
     public void parseCSVTest() throws IOException {
-        String filePath = "C:/Users/Sofi/Desktop/foreign_names_1.csv";
+        String filePath = "C:/Users/Evgenya/Desktop/foreign_names_1.csv";
         CVSparser reader = new CVSparser();
         assertEquals(25899, reader.parseCSV(filePath).size());
     }
     @Test
     public void parseCSVTest2() throws IOException {
-        String filePath = "C:/Users/Sofi/Desktop/foreign_names_1.csv";
+        String filePath = "C:/Users/Evgenya/Desktop/foreign_names_1.csv";
         List<Person> personsResult = new ArrayList();
         CVSparser reader = new CVSparser();
         personsResult = reader.parseCSV(filePath);
@@ -44,7 +44,7 @@ public class CSVparserTest {
 
     @Test
     public void parseCSVTest3() throws IOException {
-        String filePath = "C:/Users/Sofi/Desktop/foreign_names_1.csv";
+        String filePath = "C:/Users/Evgenya/Desktop/foreign_names_1.csv";
         List<Person> personsResult = new ArrayList();
         CVSparser reader = new CVSparser();
         personsResult = reader.parseCSV(filePath);
